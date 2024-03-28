@@ -131,7 +131,7 @@
 .section__title {
   padding: 5px 10px;
   font-size: 18px;
-  font-variation-settings: "wght" 700;
+  font-variation-settings: "wght" var(--section-title-wght);
 }
 
 .section__img-text {
@@ -187,9 +187,6 @@
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   mix-blend-mode: hard-light;
-}
-
-.section__img-watermark {
   text-shadow:
     -1px 0 var(--stroke-color),
     0 1px var(--stroke-color),
