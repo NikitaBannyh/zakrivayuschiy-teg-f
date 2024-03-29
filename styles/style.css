@@ -16,7 +16,7 @@
 
 .page {
   color: var(--accent-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   background-color: var(--bg-color);
   background-image: var(--bg-gradient);
   background-position: center;
@@ -42,7 +42,7 @@
   min-height: clamp(20.4375rem, 19.5352rem + 3.8498vi, 23rem);
   margin: 100px 0;
   border: 2px solid var(--accent-color);
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
   background-color: var(--bg-color);
 }
@@ -184,14 +184,14 @@
   right: 18px;
   opacity: 0.5;
   color: var(--accent-color);
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
-  mix-blend-mode: hard-light;
   text-shadow:
     -1px 0 var(--stroke-color),
     0 1px var(--stroke-color),
     1px 0 var(--stroke-color),
     0 -1px var(--stroke-color);
+  mix-blend-mode: hard-light;
 }
 
 @supports (
@@ -222,7 +222,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  gap: 5px;
   margin-top: 22px;
 }
 
@@ -252,11 +252,10 @@
 
 .button {
   position: relative;
-  min-width: 162px;
   border: 2px solid var(--accent-color);
-  padding: 9px 31px;
+  padding: 10px 35px;
   color: var(--button-text-color);
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 0.9;
   background-color: var(--bg-color);
@@ -289,64 +288,7 @@
   mix-blend-mode: difference;
 }
 
-/********** Heart ***********/
-
-.contour {
-  transition: fill 0.3s ease;
-  transition-delay: 0.06s;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-.core {
-  transition: fill 0.3s ease;
-}
-
-.heart {
-  transform-origin: center;
-}
-.main-body {
-  transition: fill 0.3s ease;
-  transition-delay: 0.05s;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--accent-color);
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--accent-color);
-}
-
-.card__icon-button:active .core {
-  fill: var(--heart-color);
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--heart-color);
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-color);
-}
-
-.like-icon.is-liked .core {
-  fill: var(--heart-color);
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--heart-color);
-}
-
-.like-icon.is-liked .heart {
-  animation: heart-pump 0.3s ease-in 0.1s alternate;
-}
-
-.like-icon.is-liked .sparks {
-  animation: heart-sparks 0.3s ease-in 0.3s alternate;
-}
+/********** Save button ***********/
 
 .save-button {
   display: flex;
@@ -365,12 +307,14 @@
   mix-blend-mode: difference;
 }
 
+/********** Dialog ***********/
+
 .dialog {
   width: clamp(21.3125rem, 20.9604rem + 1.5023vi, 22.3125rem);
   border-width: 2px solid var(--accent-color);
   padding: 30px;
   color: var(--accent-color);
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   background-color: var(--bg-color);
 }
 
@@ -412,6 +356,10 @@
 }
 
 @media (width <= 375px) {
+  .section__img-watermark {
+    top: 23px;
+    right: 11px;
+  }
   .save-button {
     flex-direction: column;
   }
